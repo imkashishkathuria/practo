@@ -18,7 +18,7 @@ const Listings = ({ params }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:5000/listings");
+        const res = await fetch("https://practo-1.onrender.com/listings");
         const allListings = await res.json();
         const filtered = allListings.filter(
           (item) => item.category === decodedCategory
